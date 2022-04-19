@@ -56,9 +56,18 @@ function rezultats(){
         if(irTrijsturis(m1,m2,m3)==false){
             t="Trijstūris neeksistē,jo jebkuru 2 malu garumu summai ir jābūt lielākai par trešo malu!"; 
         }else{
-            t="Trijstūris ar malu garumiem" +m1+","+m2+"un"+m3+"eksistē."
+            t="Trijstūris ar malu garumiem" + m1 +","+ m2 +"un"+ m3 +"eksistē."
             if(m1==m2&&m2==m3){
                 t+="Tas ir vienādmalu trijstūris."
+                
+function izvadatesktu(){
+    const teksts= rezultats();
+    console.log(teksts);
+    const sakne = document.getElemetnById("izvade");
+    const raksti = document.createElement("p");
+    raksti.innerHTML = teksts;
+    sakne.appendChild(raksti);
+}
             }
 
         }
